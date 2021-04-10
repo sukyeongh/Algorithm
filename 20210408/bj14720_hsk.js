@@ -10,6 +10,7 @@ const input = (() => {
   return () => stdin[line++];
 })();
 
+//// 변수 이름이 간결명확하고 알고리즘도 깔끔하네용 굳
 let store_num = input(); //가게의 개수
 let store_list = input().split(' '); //가게 리스트
 
