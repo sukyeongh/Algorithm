@@ -22,6 +22,8 @@ for (let i = 0; i < N; i++) {
   bulk_list.push({ weight: w, height: h, rank: 1 });
 }
 
+//// 클로저, 비구조화 할당, map연산, join까지 JS를 적재적소로 정말 잘 활용하시는 것 같아요
+//// 알고리즘 구현도 깔끔합니다!
 const rank = bulk_list.map((item) => {
   for (let j = 0; j < N; j++) {
     if (item.weight < bulk_list[j].weight && item.height < bulk_list[j].height) {
