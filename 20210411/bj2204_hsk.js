@@ -15,6 +15,7 @@ Hall
 
 const input = (() => {
   let line = 0;
+  console.log(line);
   return () => stdin[line++];
 })();
 
