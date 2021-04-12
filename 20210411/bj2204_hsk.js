@@ -31,6 +31,7 @@ const sortArr = (array) => {
 };
 const first_dic = [];
 
+
 while (true) {
   let N = input();
   if (parseInt(N) === 0) break;
@@ -40,6 +41,7 @@ while (true) {
     origin_words.push(input());
   }
 
+  //// 제일 앞서는 단어 '하나'만 필요한 경우이니 배열의 최소값 구하듯이 짰다면 더욱 효율적이었을 것 같습니다!
   sortArr(origin_words);
   first_dic.push(origin_words[0]);
 }
