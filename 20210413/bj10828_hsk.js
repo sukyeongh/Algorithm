@@ -23,6 +23,7 @@ const input = (() => {
   return () => stdin[line++];
 })();
 
+//// 클래스 깔꼼깔꼼~
 class Stack {
   constructor() {
     this.list = [];
@@ -46,8 +47,10 @@ class Stack {
   }
 }
 
+//// 메인 깔꼼깔꼼~
 const stack = new Stack();
 const N = parseInt(input());
+//// 출력하기 위해 담는 변수니 output으로 이름 짓는건 어때요? 어떤 문제든 계속 같은 이름으로 사용해도 자연스러울 것 같아요
 const callback_num = [];
 
 for (let i = 0; i < N; i++) {
