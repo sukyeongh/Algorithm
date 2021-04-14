@@ -24,6 +24,7 @@ const input = (() => {
   return () => stdin[line++];
 })();
 
+//// 깔꼼~
 class Queue {
   constructor() {
     this.list = [];
