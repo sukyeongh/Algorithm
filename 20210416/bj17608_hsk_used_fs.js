@@ -47,6 +47,7 @@ for (let i = 0; i < N; i++) {
 let longest_bar = 0;
 let count = 0;
 
+//// 깔꼼!
 while (!stack.empty()) {
   let curr_bar = stack.pop();
   if (curr_bar > longest_bar) {
