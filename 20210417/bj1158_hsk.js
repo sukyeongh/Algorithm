@@ -29,7 +29,7 @@ class Queue {
 }
 
 let queue = new Queue();
-
+//// CLEAN
 let N = parseInt(stdin[0]);
 let order = parseInt(stdin[1]);
 let output = [];
