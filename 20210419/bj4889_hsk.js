@@ -19,7 +19,7 @@ for (let i = 0; i < stdin.length; i++) {
   for (let char of line) {
     if (char === '{') {
       stack.push('{');
-ㅇ      //// 이 부분에 continue;를 넣으면 else문을 없앨 수 있어요! 책 클린코드에 의하면 else문은 지양하고 대신 return등의 키워드와 if를 사용하는게 좋다고 합니다.
+      //// 이 부분에 continue;를 넣으면 else문을 없앨 수 있어요! 책 클린코드에 의하면 else문은 지양하고 대신 return등의 키워드와 if를 사용하는게 좋다고 합니다.
     } else {
       if (stack.length === 0) {
         stack.push('{');
