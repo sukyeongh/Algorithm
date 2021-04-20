@@ -35,6 +35,7 @@ const ac = (list, commands) => {
     }
   }
   if (is_reverse) return '[' + list.reverse().join(',') + ']';
+  //// 사소한 부분이지만, 이 부분은 else를 빼도 될 것 같습니다
   else return '[' + list.join(',') + ']';
 };
 
