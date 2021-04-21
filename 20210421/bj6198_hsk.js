@@ -15,6 +15,7 @@ let buildings = stdin.filter((val, idx) => idx !== 0);
 let stack = [];
 let count = 0;
 
+//// 깔꼼해요~
 for (let i = 0; i < N; i++) {
   while (stack.length !== 0) {
     if (stack[stack.length - 1] <= buildings[i]) {
