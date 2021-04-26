@@ -4,15 +4,10 @@ const stdin = (process.platform === 'linux' ? fs.readFileSync('/dev/stdin').toSt
 const N = parseInt(stdin);
 const starLen = parseInt(Math.pow(2, N));
 const starArr = Array.from(Array(starLen), () => Array(starLen).fill(''));
-let result = '';
 
 const drawStar = (x, y, len) => {
   if (len === 1) {
-    starArr.forEach((horizontal, index) => {
-      if (index === x) {
-        horizontal[y] = '*';
-      }
-    });
+    starArr[x][y] = '*';
     return;
   }
 
@@ -24,13 +19,11 @@ const drawStar = (x, y, len) => {
 
 drawStar(0, 0, starLen);
 
-starArr.forEach((horizontal, h_index) => {
-  for (let i = 0; i < horizontal.length; i++) {
-    if (i === horizontal.length - h_index) break;
-    if (horizontal[i] === '*') result = result.concat('*');
-    else result = result.concat(' ');
+for (var i = 0; i < starLen; i++) {
+  let result = '';
+  for (var j = 0; j < starLen - i; j++) {
+    if (starArr[i][j] == '*') result += '*';
+    else result += ' ';
   }
-  if (h_index !== starArr.length - 1) result = result.concat('\n');
-});
-
-console.log(result);
+  console.log(result);
+}
