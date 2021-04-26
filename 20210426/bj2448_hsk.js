@@ -21,6 +21,7 @@ const drawStar = (x, y, len) => {
   drawStar(x + currLen, y + currLen, currLen);
 };
 
+//// N-1를 상수로 선언하고 topVertexY 식으로 꼭지점을 의미한다는 힌트가 주어졌으면 이해하기 더 좋았을 것 같아요!
 drawStar(0, N - 1, N);
 //가장 큰 삼각형부터
 
