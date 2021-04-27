@@ -24,6 +24,7 @@ const drawStar = (x, y, len) => {
 //// N-1를 상수로 선언하고 topVertexY 식으로 이름을 지어 꼭지점을 의미한다는 힌트가 주어졌으면 이해하기 더 좋았을 것 같아요!
 drawStar(0, N - 1, N);
 //가장 큰 삼각형부터
+//// 이 주석은 없어도 괜찮을 것 같습니다.
 
 for (var i = 0; i < N; i++) {
   let result = '';
