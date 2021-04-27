@@ -19,8 +19,11 @@ const K = parseInt(input());
 let cards = [];
 let hs = new Set([]);
 for (let i = 0; i < N; i++) {
+  //// {}로 객체가 탄생하는 마법.. 부 럽 다 !
   cards.push({ str: input(), visited: false });
 }
+
+//// 깔끔간결하게 되게 잘 짜여진 것 같습니다
 const dfs = (sum_str, count) => {
   if (count === 0) {
     hs.add(sum_str);
