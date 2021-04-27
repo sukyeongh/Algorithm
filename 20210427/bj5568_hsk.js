@@ -23,7 +23,7 @@ for (let i = 0; i < N; i++) {
   cards.push({ str: input(), visited: false });
 }
 
-//// 깔끔간결하게 되게 잘 짜여진 것 같습니다
+//// 깔끔간결하게 되게 잘 짜여진 것 같습니다. DFS가 뭔지 정확히는 모르지만 멋지네요
 const dfs = (sum_str, count) => {
   if (count === 0) {
     hs.add(sum_str);
