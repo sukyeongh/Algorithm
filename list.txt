@@ -1,0 +1,36 @@
+구현
+https://www.acmicpc.net/problem/14720 :O
+https://www.acmicpc.net/problem/10988 :O
+https://www.acmicpc.net/problem/7568 :O
+https://www.acmicpc.net/problem/2204 :O
+https://www.acmicpc.net/problem/13015 :O
+
+스택/큐/덱
+https://www.acmicpc.net/problem/10828 (스택 손 풀기) :O
+https://www.acmicpc.net/problem/10845 (큐 손 풀기) :O
+https://www.acmicpc.net/problem/10866 (덱 손 풀기) :O
+https://www.acmicpc.net/problem/17608 :O
+https://www.acmicpc.net/problem/1158 :O
+https://www.acmicpc.net/problem/5430 :O
+https://www.acmicpc.net/problem/4889 :O
+https://www.acmicpc.net/problem/17298 :O
+https://www.acmicpc.net/problem/6198 :O
+
+재귀
+https://www.acmicpc.net/problem/17478 :O
+https://www.acmicpc.net/problem/10829 :O
+https://www.acmicpc.net/problem/1769 :O
+https://www.acmicpc.net/problem/16505 :O
+https://www.acmicpc.net/problem/2448 : O
+https://www.acmicpc.net/problem/5586 : O
+https://www.acmicpc.net/problem/15270
+https://www.acmicpc.net/problem/5876
+https://www.acmicpc.net/problem/6580
+https://www.acmicpc.net/problem/2504
+https://www.acmicpc.net/problem/5904
+https://www.acmicpc.net/problem/1631
+https://www.acmicpc.net/problem/1780
+https://www.acmicpc.net/problem/1992
+https://www.acmicpc.net/problem/9994
+https://www.acmicpc.net/problem/14454
+https://www.acmicpc.net/problem/9997
