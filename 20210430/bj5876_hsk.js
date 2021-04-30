@@ -20,33 +20,37 @@ const horseshoes = board.map((value) => {
   return (value = input().split(''));
 });
 
-const getMaxBalanceLen = (row, col, openBracketCnt, closeBracketCnt) => {
+const getMaxLen = (row, col, openCnt, closeCnt) => {
   if (row < 0 || col < 0 || row >= N || col >= N) return 0;
   if (visited[row][col]) return 0;
 
   visited[row][col] = true;
   if (horseshoes[row][col] === '(') {
-    if (closeBracketCnt > 0) {
+    if (closeCnt > 0) {
       visited[row][col] = false;
       return 0;
     }
-    openBracketCnt++;
+    openCnt++;
   } else {
-    closeBracketCnt++;
+    closeCnt++;
   }
 
-  if (openBracketCnt === closeBracketCnt) {
+  if (openCnt === closeCnt) {
     visited[row][col] = false;
-    return openBracketCnt * 2;
+    return openCnt * 2;
   }
 
-  let maxBalancedLen = getMaxBalanceLen(row + 1, col, openBracketCnt, closeBracketCnt);
-  maxBalancedLen = Math.max(maxBalancedLen, getMaxBalanceLen(row - 1, col, openBracketCnt, closeBracketCnt));
-  maxBalancedLen = Math.max(maxBalancedLen, getMaxBalanceLen(row, col + 1, openBracketCnt, closeBracketCnt));
-  maxBalancedLen = Math.max(maxBalancedLen, getMaxBalanceLen(row, col - 1, openBracketCnt, closeBracketCnt));
+  let maxLen = getMaxLen(row + 1, col, openCnt, closeCnt);
+  maxLen = Math.max(maxLen, getMaxLen(row - 1, col, openCnt, closeCnt));
+  maxLen = Math.max(maxLen, getMaxLen(row, col + 1, openCnt, closeCnt));
+  maxLen = Math.max(maxLen, getMaxLen(row, col - 1, openCnt, closeCnt));
 
   visited[row][col] = false;
-  return maxBalancedLen;
+  return maxLen;
 };
 
-console.log(getMaxBalanceLen(0, 0, 0, 0));
+if (horseshoes[0][0] === ')') {
+  console.log(0);
+} else {
+  console.log(getMaxLen(0, 0, 0, 0));
+}
