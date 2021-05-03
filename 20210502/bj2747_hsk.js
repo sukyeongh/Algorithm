@@ -1,6 +1,7 @@
 const fs = require('fs');
 const stdin = process.platform === 'linux' ? fs.readFileSync('/dev/stdin').toString().trim() : `10`;
 
+//// 참 잘했어요!
 let N = parseInt(stdin);
 let fibo = [0, 1];
 
