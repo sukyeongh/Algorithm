@@ -35,12 +35,12 @@ input();
 let bits = [];
 let pixels = Array.from(Array(N), () => Array(N).fill(''));
 
-const insertBits = (col, start, hex_num) => {
+const insertBits = (row, start, hex_num) => {
   for (let i = start + 7; i >= start; i--) {
     if (hex_num >= Math.pow(2, i - start)) {
       hex_num -= Math.pow(2, i - start);
-      pixels[col][i] = 'B';
-    } else pixels[col][i] = 'W';
+      pixels[row][i] = 'B';
+    } else pixels[row][i] = 'W';
   }
 };
 
@@ -73,11 +73,9 @@ for (let i = 0; i < N; i++) bits.push(input());
 for (let i = 0; i < N; i++) {
   for (let j = 0; j < N / 8; j++) {
     let hexStr = bits[i].split(',');
-    if (j % 2 == 0) insertBits(i, j * 8, parseInt(hexStr[0].substr(2, 2), 16));
-    else insertBits(i, j * 8, parseInt(hexStr[1].substr(2, 2), 16));
+    insertBits(i, j * 8, parseInt(hexStr[j], 16));
   }
 }
-
 console.log(N);
 quardTree(0, 0, N);
 console.log(result.join(''));
