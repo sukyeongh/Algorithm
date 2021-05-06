@@ -45,10 +45,11 @@ const insertBits = (row, start, hex_num) => {
 };
 
 const quardTree = (row, col, N) => {
+  //// is_same 함수를 따로 뒀다면 break 대신 return으로 처리할 수 있어서 깔끔했을 것 같아요!
   let is_same = true;
 
   for (let i = row; i < row + N; i++) {
-    if (!is_same) break;
+    if (!is_same) break; //// 2중 for문 바로 탈출 가능합니다 https://graykick.tistory.com/4
     for (let j = col; j < col + N; j++) {
       if (pixels[i][j] !== pixels[row][col]) {
         is_same = false;
@@ -61,6 +62,8 @@ const quardTree = (row, col, N) => {
     result.push(pixels[row][col]);
     return;
   }
+  
+  //// 재귀 감을 찾으신 것 같네요 ㅎㅎ 꽤 어려웠을텐데 수고 많으셨습니다!
   result.push('Q');
   quardTree(row, col, N / 2);
   quardTree(row, col + N / 2, N / 2);
