@@ -3,6 +3,7 @@ const stdin = process.platform === 'linux' ? fs.readFileSync('/dev/stdin').toStr
 
 const bracket_arr = stdin.split('');
 
+//// 깔끔!
 const pair_Brackeet = (brackets, start_index, end_index) => {
   if (start_index > end_index) return 1;
 
