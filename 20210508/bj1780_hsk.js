@@ -27,23 +27,24 @@ for (let i = 0; i < N; i++) {
 }
 
 const paper = (row, col, N) => {
-  let first = paper_list[row][col];
-  let flag = true;
+  let first_num = paper_list[row][col];
+  let is_same = true;
 
   for (let i = row; i < row + N; i++) {
     for (let j = col; j < col + N; j++) {
-      if (paper_list[i][j] !== first) {
-        flag = false;
+      if (paper_list[i][j] !== first_num) {
+        is_same = false;
         break;
       }
     }
   }
 
-  if (flag) {
-    result[parseInt(first) + 1]++;
+  if (is_same) {
+    result[parseInt(first_num) + 1]++;
   } else {
-    for (let i = row; i < row + N; i += N / 3) {
-      for (let j = col; j < col + N; j += N / 3) {
+    const division_size = Math.floor(N / 3);
+    for (let i = row; i < row + N; i += division_size) {
+      for (let j = col; j < col + N; j += division_size) {
         paper(i, j, N / 3);
       }
     }
@@ -51,7 +52,4 @@ const paper = (row, col, N) => {
 };
 
 paper(0, 0, N);
-
-for (let i = 0; i < 3; i++) {
-  console.log(result[i]);
-}
+console.log(result.join('\n'));
