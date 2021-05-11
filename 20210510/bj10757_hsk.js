@@ -4,6 +4,7 @@ const stdin = (process.platform === 'linux'
   : `9223372036854775807 9223372036854775808`
 ).split(' ');
 
+//// 편하네요 js
 let A = BigInt(stdin[0]);
 let B = BigInt(stdin[1]);
 
