@@ -26,6 +26,7 @@ for (let i = 0; i < N; i++) {
   paper_list.push(input().split(' '));
 }
 
+//// 무난함다
 const paper = (row, col, N) => {
   let first_num = paper_list[row][col];
   let is_same = true;
