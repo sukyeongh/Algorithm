@@ -2,6 +2,7 @@ import sys
 N = int(sys.stdin.readline())
 bit = 0
 
+## 깔끔합니다잉
 for i in range(N):
     calculate = sys.stdin.readline().split()
     command = calculate[0]
