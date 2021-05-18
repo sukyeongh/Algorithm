@@ -37,6 +37,7 @@ const cntTestSentence = (idx, check) => {
 for (let i = 0; i < words.length; i++) {
   let check = 0;
   for (let j = 0; j < words[i].length; j++) {
+    //// 비트마스킹 예습 굳
     check |= 1 << (words[i].charCodeAt(j) - 'a'.charCodeAt(0));
   }
   alphabet_check.push(check);
