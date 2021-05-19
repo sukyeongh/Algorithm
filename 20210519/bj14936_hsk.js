@@ -1,3 +1,4 @@
+// 어느부분이 틀린지 잘 모르겠습니다.
 const fs = require('fs');
 const stdin = (process.platform === 'linux' ? fs.readFileSync('/dev/stdin').toString().trim() : `10 10`).split(' ');
 
