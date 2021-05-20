@@ -13,6 +13,7 @@ const N = parseInt(input[0]);
 const S = parseInt(input[1]);
 let result = 0;
 
+//// 굳~
 let subset_num = 1 << N;
 for (let i = 1; i < subset_num; i++) {
   let sum = 0;
