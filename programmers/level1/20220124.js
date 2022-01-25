@@ -14,12 +14,10 @@ function solution(id_list, report, k) {
     if (reportObj[reportPerson].report.indexOf(reportedPerson) === -1) {
       reportObj[reportPerson].report.push(reportedPerson);
       reportObj[reportedPerson].reported += 1;
-    }
-  });
 
-  id_list.forEach((val) => {
-    if (reportObj[val].reported >= k) {
-      reportObj[val].isStoppedId = true;
+      if (reportObj[reportedPerson].reported >= k) {
+        reportObj[reportedPerson].isStoppedId = true;
+      }
     }
   });
 
